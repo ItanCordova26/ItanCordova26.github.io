@@ -1,0 +1,144 @@
+:root{
+  --bg1: #0f0f10;
+  --bg2: #1a1a1d;
+  --accent1: #6a11cb;
+  --accent2: #2575fc;
+  --text: #f2f2f2;
+  --muted: #9ca3af;
+}
+
+*{box-sizing:border-box}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg1);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden; /* 👈 Evita el scroll vertical y horizontal */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;      /* 👈 Ocupa toda la pantalla */
+  padding: 20px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.left{
+  text-align:center;
+}
+
+.avatar{
+  width: 220px;     /* 🔥 más grande */
+  height: 220px;    /* 🔥 más grande */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid transparent;
+  background: linear-gradient(135deg,var(--accent1),var(--accent2));
+  padding: 5px;
+  box-shadow: 0 0 25px rgba(100,100,255,0.6);
+  margin: 0 auto 18px;
+}
+
+.avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 🔥 siempre se adapta */
+  border-radius: 50%;
+}
+
+
+.upload{
+  font-size:0.7rem;
+  background:var(--accent1);
+  color:#fff;
+  padding:4px 10px;
+  border-radius:8px;
+  cursor:pointer;
+  display:inline-block;
+  position:relative;
+}
+
+.upload input[type="file"]{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+.right {
+  flex: 2;              /* Aumenta el espacio que ocupa la sección derecha */
+  min-width: 400px;     /* Puedes ajustar este valor según lo que necesites */
+  max-width: 700px;     /* Limita el ancho máximo para que no se vea demasiado grande */
+  padding: 2rem;        /* Espaciado interno */
+  box-sizing: border-box;
+}
+
+h1{
+  font-size:2.2rem;
+  margin:0 0 6px;
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.role{
+  margin:0 0 18px;
+  font-weight:400;
+  color:var(--muted);
+}
+
+.card{
+  background:var(--bg2);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  width: 100%;           /* 👈 Hace que la tarjeta ocupe todo el ancho disponible */
+  box-sizing: border-box; /* 👈 Asegura que el padding no desborde el ancho */
+}
+
+.card h2{
+  margin:0 0 8px;
+  font-size:1.2rem;
+  color:var(--accent2);
+}
+
+.card p{
+  margin:0;
+  line-height:1.6;
+  color:var(--muted);
+}
+
+.social{
+  margin-top:20px;
+  display:flex;
+  gap:20px;
+}
+
+.icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:var(--bg2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 12px rgba(100,100,255,0.4);
+  transition: all 0.3s;
+}
+
+.icon img{
+  width:22px;
+  height:22px;
+}
+
+.icon:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 18px rgba(100,100,255,0.9);
+}
+
+
